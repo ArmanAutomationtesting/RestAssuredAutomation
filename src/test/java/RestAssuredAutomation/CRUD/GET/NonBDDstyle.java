@@ -1,6 +1,7 @@
 package RestAssuredAutomation.CRUD.GET;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 
 public class NonBDDstyle {
@@ -20,5 +21,12 @@ public class NonBDDstyle {
         r.basePath("/IN/211012");
         r.when().get();
         r.then().log().all().statusCode(201);
+    }
+    JsonPath jsonPath = new JsonPath("GET/BDD");
+
+    public JsonPath getJsonPath() {
+        jsonPath.getInt("[0]");
+
+        return jsonPath;
     }
 }
