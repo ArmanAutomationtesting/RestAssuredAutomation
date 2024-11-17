@@ -16,15 +16,12 @@ public class CountAndRepeat {
             if (count[i] == 2){
                 ans.add(i);
             }
-            else if (count[i] == 0){
-                ans.add(i);
-            }
         }
 
         return ans;
     }
     public static void main(String[] args){
-        int[] arr = {0,3,4,5,6,6};
+        int[] arr = {0,3,4,5,5,4,5,6,6};
         CountAndRepeat countAndRepeat = new CountAndRepeat();
         System.out.println(countAndRepeat.findTwoElement(arr));
     }
