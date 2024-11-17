@@ -9,8 +9,8 @@ public class Reverse_String {
         for(int i = Str.length-1 ; i >= 0 ; i-- ){
             Str1+=Str[i] + " ";
         }
-        System.out.println(Str1.trim());
-        return Str1.trim();
+        System.out.println(Str1);
+        return Str1;
 
     }
     public static void main(String[] args){

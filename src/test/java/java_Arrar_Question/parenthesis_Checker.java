@@ -25,6 +25,7 @@ public class parenthesis_Checker {
     }
 
     public static void main(String[] args){
+
         System.out.println(isParenthesisBalanced("{([)])}"));;
     }
 }
