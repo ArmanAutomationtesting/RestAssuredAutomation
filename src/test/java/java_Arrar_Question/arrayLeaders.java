@@ -1,32 +1,41 @@
 package java_Arrar_Question;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class arrayLeaders {
     public ArrayList<Integer> arrLeadernumber(int[] arr){
-        ArrayList<Integer> list = new ArrayList<>();
-        int Leader = -1;
-        for(int i = arr.length -1 ; i >= 0; i--){
-//            if(arr[i] >= Leader){
-//                list.add(arr[i]);
-//                Leader = arr[i];
-//            }
-//        }
-            if(list.contains(arr[i]) && Leader == arr[i]){
-                list.add(arr[i]);
-            } else if (Leader < arr[i]) {
-                list.add(arr[i]);
-                Leader = arr[i];
+        ArrayList<Integer> arrleader = new ArrayList<>();
+        int n = arr.length;
+        if(n==1){
+            arrleader.add(arr[n]);
+        }
+        int top= arr[n-1];
+        arrleader.add(top);
+        for(int i = n-2; i>=0; i--){
+            if(arr[i] >= top){
+                arrleader.add(arr[i]);
+                top = arr[i];
             }
+        }
+        return arrleader;
+    }
+
+
+    public static int firstRepeated(int[] arr) {
+        for(int i = 0; i<arr.length-1; i++){
+            for(int j=1; j<arr.length-1; j++){
+                if (arr[i]==arr[j] && i!=j){
+                    return i;
+                }
             }
-            list.sort(Collections.reverseOrder());
-        return list;
+        }
+        return -1;
+        // Your code here
     }
     public static void main(String[] args){
-        int[] arr = {7,5,43,7,8,9,6,4};
+        int[] arr = {1,5,3,4,3,5,6};
         arrayLeaders arrayLeaders = new arrayLeaders();
+//        System.out.println(arrayLeaders.arrLeadernumber(arr));
         System.out.println(arrayLeaders.arrLeadernumber(arr));
 
     }

@@ -7,7 +7,7 @@ public class Max_SUM_ofanArray {
         int maxsum=arr[0];
 
         for(int i=0;i<arr.length;i++){
-            sum=sum+arr[i];
+            sum+=arr[i];
 
             if (sum > maxsum){
                 maxsum = sum;

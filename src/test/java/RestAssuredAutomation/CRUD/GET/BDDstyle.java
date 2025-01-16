@@ -54,6 +54,7 @@ public class BDDstyle {
         RestAssured.given()
                 .baseUri("https://api.zippopotam.us")
                 .basePath("/IN/208001")
+
                 .when()
                 .log().all().get()
                 .then()

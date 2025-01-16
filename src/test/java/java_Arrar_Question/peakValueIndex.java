@@ -10,9 +10,7 @@ public class peakValueIndex {
          for (int i = 0; i < arr.length; i++) {
              if (arr[i] == total - arr[i]) {
                  return i;
-
-
-             } else continue;
+             }
          }
          return -1;
 
