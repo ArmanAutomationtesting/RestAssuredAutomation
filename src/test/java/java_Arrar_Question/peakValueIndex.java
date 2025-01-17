@@ -16,7 +16,7 @@ public class peakValueIndex {
 
      }
     public  static  void main(String[] args){
-         int[] arr = {1,2,3};
+         int[] arr = {1,2,3,6};
          peakValueIndex peakValueIndex = new peakValueIndex();
         System.out.println(peakValueIndex.value(arr));
     }
