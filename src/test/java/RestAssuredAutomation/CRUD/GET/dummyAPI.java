@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class dummyAPI  {
+public class dummyAPI   {
     PayloadManager payloadManager = new PayloadManager();
     public RequestSpecification requestSpecification;
  public Response response;
