@@ -1,5 +1,6 @@
 package POJO;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
 public class Data {
@@ -15,24 +16,15 @@ public class Data {
     //}
 
     private int year;
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
     private Double price;
 
-    @SerializedName("CPU model")
-    private String CPU_mod;
+//    @SerializedName("CPU model")
+    @JsonProperty("CPUModel")
+    private String CPUModel;
 
-    @SerializedName("Hard disk size")
+//    @SerializedName("Hard disk size")
+    @JsonProperty("hardDiskSize")
     private String hardDiskSize;
-
-
 
     public int getYear() {
         return year;
@@ -42,12 +34,20 @@ public class Data {
         this.year = year;
     }
 
-    public String getCPU_mod() {
-        return CPU_mod;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setCPU_mod(String CPU_mod) {
-        this.CPU_mod = CPU_mod;
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public String getCPUModel() {
+        return CPUModel;
+    }
+
+    public void setCPUModel(String CPUModel) {
+        this.CPUModel = CPUModel;
     }
 
     public String getHardDiskSize() {
